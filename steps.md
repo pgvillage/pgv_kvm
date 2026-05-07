@@ -1,8 +1,7 @@
-## steps to set up pgvillage on kvm
+## steps to set up kvm on an Ubuntu machine and prepares VM's ready for Ubuntu to be installed
 
 ### 0: download base image
 https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.7-x86_64-boot.iso
-
 
 ###  1: install packages 
 
@@ -80,13 +79,3 @@ virt-install --name client --ram 2048 --vcpus 2 --disk path=/var/lib/libvirt/ima
 sudo systemd-machine-id-setup
 sudo hostnamectl set-hostname client
 ```
-
-### 14: clone pgvillage on client vm
-
-```bash
-cd ~
-mkdir git
-cd git
-git clone https://github.com/pgvillage/pgvillage
-```
-
